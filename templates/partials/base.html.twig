@@ -4,19 +4,20 @@
 
 {% block head %}
 {{ parent() }}
-
+    <link rel="icon" type="image/png" href="/user/themes/globasa-learn2-theme/images/globasa-logo.webp">        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 {# change: use Globasa's webp logo #}
 {# Would not be required if it wasn't a webp #}
-<link rel="icon" type="image/png" href="{{ url('theme://images/logo-globasa.webp') }}" />
+    <link rel="icon" type="image/png" href="{{ url('theme://images/logo-globasa.webp') }}" />
 {% include 'partials/langswitcher.hreflang.html.twig' %}
 {# end change #}
-
 {% endblock head %}
 
  
 {% block stylesheets %}
     {{ parent() }}
     {% do 
-assets.addCss('theme://css/globasa.css?1021') 
+assets.addCss('theme://css/globasa.css?1021a') 
 %}
 {% endblock %}
