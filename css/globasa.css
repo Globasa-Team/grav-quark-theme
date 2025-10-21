@@ -1,3 +1,7 @@
+html, body {
+  font-family: "Open Sans", "Segoe UI", "Noto Sans", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 body {
     font-size: 1.2rem;
     color: black;
