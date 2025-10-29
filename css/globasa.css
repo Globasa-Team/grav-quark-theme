@@ -3,14 +3,19 @@ html, body {
 }
 
 body {
-    font-size: 1.0rem;
-    color: black;
+  font-size: 1.0rem;
+  color: black;
+}
+
+.modular-features .feature-content, .modular-features .feature-icon h6 {
+  color: black;
 }
 
 .modular-features .frame-box, .modular-text {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 }
+
 .modular-text h2, .modular-features h2 {
     margin-top: 1.5rem;
 }
