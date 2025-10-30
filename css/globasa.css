@@ -1,35 +1,62 @@
-html, body {
-  font-family: "Open Sans", "Segoe UI", "Noto Sans", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+@font-face { font-family: 'Nebula Sans'; font-weight: 100; src: url('/fonts/WOFF2/NebulaSans-Light.woff2') format('woff2'); }
+@font-face { font-family: 'Nebula Sans'; font-weight: 200; src: url('/fonts/WOFF2/NebulaSans-Light.woff2') format('woff2'); }
+@font-face { font-family: 'Nebula Sans'; font-weight: 300; src: url('/fonts/WOFF2/NebulaSans-Book.woff2') format('woff2'); }
+@font-face { font-family: 'Nebula Sans'; font-weight: 400; src: url('/fonts/WOFF2/NebulaSans-Medium.woff2') format('woff2'); }
+@font-face { font-family: 'Nebula Sans'; font-weight: 600; src: url('/fonts/WOFF2/NebulaSans-Semibold.woff2') format('woff2'); }
+@font-face { font-family: 'Nebula Sans'; font-weight: 700; src: url('/fonts/WOFF2/NebulaSans-Bold.woff2') format('woff2'); }
+@font-face { font-family: 'Nebula Sans'; font-weight: 800; src: url('/fonts/WOFF2/NebulaSans-Black.woff2') format('woff2'); }
+@font-face { font-family: 'Nebula Sans'; font-weight: 100; font-style: italic; src: url('/fonts/WOFF2/NebulaSans-LightItalic.woff2') format('woff2'); }
+@font-face { font-family: 'Nebula Sans'; font-weight: 200; font-style: italic; src: url('/fonts/WOFF2/NebulaSans-LightItalic.woff2') format('woff2'); }
+@font-face { font-family: 'Nebula Sans'; font-weight: 300; font-style: italic; src: url('/fonts/WOFF2/NebulaSans-BookItalic.woff2') format('woff2'); }
+@font-face { font-family: 'Nebula Sans'; font-weight: 400; font-style: italic; src: url('/fonts/WOFF2/NebulaSans-MediumItalic.woff2') format('woff2'); }
+@font-face { font-family: 'Nebula Sans'; font-weight: 600; font-style: italic; src: url('/fonts/WOFF2/NebulaSans-SemiboldItalic.woff2') format('woff2'); }
+@font-face { font-family: 'Nebula Sans'; font-weight: 700; font-style: italic; src: url('/fonts/WOFF2/NebulaSans-BoldItalic.woff2') format('woff2'); }
+@font-face { font-family: 'Nebula Sans'; font-weight: 800; font-style: italic; src: url('/fonts/WOFF2/NebulaSans-BlackItalic.woff2') format('woff2'); }
+
+:root {
+  --regular_font_features: 'ss01' 0, 'ss02' 0, 'ss03' 1;
+  --italic_font_features: 'ss01' 1, 'ss02' 1, 'ss03' 0;
+}
+
+html, body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Nebula Sans", "Open Sans", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-feature-settings: var(--regular_font_features);
+  letter-spacing: -0.03em;
+}
+
+em {
+  font-feature-settings: var(--italic_font_features);
 }
 
 body {
-    font-size: 1.0rem;
-    color: black;
+  font-size: 1.0rem;
+  color: black;
 }
 
 .modular-features .frame-box, .modular-text {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
+
 .modular-text h2, .modular-features h2 {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h2 {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 h4 {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 /* Home page hero */
@@ -56,38 +83,42 @@ header h1 {
 
 /* Deprecated: we now use an image */
 .slogan-glb {
- /* font-size:32px; */
- font-size: 2.5rem;
- font-weight: 600;
- font-style: italic;
- color: black;
+  /* font-size:32px; */
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-style: italic;
+  color: black;
 }
 
 .slogan-nat {
-   /* font-size: 25px; */
+  /* font-size: 25px; */
   font-size: 2rem;
   font-weight: 400;
   color: black;
 }
 
 @media (max-width:840px) {
- .slogan-glb {
-  font-size:1.5rem
- }
- .slogan-nat {
-   font-size:1.5rem;
- }
- .hero.hero-fullscreen {
-  min-height: 50vh;
-}
+  .slogan-glb {
+    font-size: 1.5rem
+  }
+
+  .slogan-nat {
+    font-size: 1.5rem;
+  }
+
+  .hero.hero-fullscreen {
+    min-height: 50vh;
+  }
 
 }
+
 @media (max-width:600px) {
   .slogan-glb {
-   font-size:1rem
+    font-size: 1rem
   }
+
   .slogan-nat {
-    font-size:1rem;
+    font-size: 1rem;
   }
 }
 
@@ -120,7 +151,7 @@ footer img.cc_license {
   max-width: 2em;
   margin: .51em 0 0 0;
   height: auto;
-}   
+}
 
 footer img.cc_license:last-of-type {
   margin-right: .51em;
