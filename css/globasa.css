@@ -31,6 +31,13 @@ em {
 body {
   font-size: 1.0rem;
   color: black;
+<<<<<<< HEAD
+=======
+}
+
+.modular-features .feature-content, .modular-features .feature-icon h6 {
+  color: black;
+>>>>>>> d075384a2a9f51332f07a15ba4ba7f259534f8b0
 }
 
 .modular-features .frame-box, .modular-text {
